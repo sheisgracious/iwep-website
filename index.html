@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      iWEP - International Women's Empowerment Prayer Network<strong>(Mock
+      nonfunctional page)</strong>
+    </title>
+    <style>
+      :root {
+        --primary-color: #6a0dad;
+        --secondary-color: #ffffff;
+        --accent-color: #e0b0ff;
+        --text-color: #333333;
+        --light-text: #f8f8f8;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        line-height: 1.6;
+      }
+
+      header {
+        background: linear-gradient(135deg, var(--primary-color), #8a2be2);
+        color: var(--secondary-color);
+        padding: 1rem 0;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .logo {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+
+      .logo span {
+        color: var(--accent-color);
+      }
+
+      .tagline {
+        font-style: italic;
+        margin-bottom: 1rem;
+      }
+
+      nav {
+        background-color: var(--primary-color);
+        padding: 0.5rem 0;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        flex-wrap: wrap;
+      }
+
+      nav ul li {
+        margin: 0 1rem;
+      }
+
+      nav ul li a {
+        color: var(--secondary-color);
+        text-decoration: none;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        background-color: var(--accent-color);
+        color: var(--primary-color);
+      }
+
+      .hero {
+        background: url("https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")
+          no-repeat center center/cover;
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: var(--secondary-color);
+        position: relative;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(106, 13, 173, 0.7);
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        padding: 0 2rem;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      }
+
+      .btn {
+        display: inline-block;
+        background-color: var(--accent-color);
+        color: var(--primary-color);
+        padding: 0.8rem 2rem;
+        border: none;
+        border-radius: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+
+      .btn:hover {
+        background-color: var(--secondary-color);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      section {
+        padding: 4rem 0;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 3rem;
+        color: var(--primary-color);
+        position: relative;
+      }
+
+      .section-title::after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 4px;
+        background-color: var(--accent-color);
+        margin: 1rem auto;
+      }
+
+      .about-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .about-text {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .about-image {
+        flex: 1;
+        min-width: 300px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .about-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .services {
+        background-color: #f9f5ff;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .service-card {
+        background-color: var(--secondary-color);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .service-image {
+        height: 200px;
+        overflow: hidden;
+      }
+
+      .service-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .service-card:hover .service-image img {
+        transform: scale(1.1);
+      }
+
+      .service-content {
+        padding: 1.5rem;
+      }
+
+      .service-content h3 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+      }
+
+      .events {
+        background-color: var(--secondary-color);
+      }
+
+      .event-calendar {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: var(--secondary-color);
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .calendar-header {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        padding: 1rem;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 1px;
+        background-color: #ddd;
+      }
+
+      .calendar-day-header {
+        background-color: var(--accent-color);
+        padding: 0.5rem;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .calendar-day {
+        background-color: var(--secondary-color);
+        padding: 0.5rem;
+        min-height: 100px;
+        border-bottom: 1px solid #eee;
+      }
+
+      .calendar-day.empty {
+        background-color: #f9f9f9;
+      }
+
+      .calendar-day.today {
+        background-color: #f0e6ff;
+        font-weight: bold;
+      }
+
+      .event-item {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        padding: 0.2rem 0.5rem;
+        margin: 0.2rem 0;
+        border-radius: 3px;
+        font-size: 0.8rem;
+        cursor: pointer;
+      }
+
+      .event-item:hover {
+        background-color: var(--accent-color);
+        color: var(--primary-color);
+      }
+
+      .birthdays {
+        background-color: #f9f5ff;
+        text-align: center;
+      }
+
+      .birthday-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .birthday-card {
+        background-color: var(--secondary-color);
+        border-radius: 10px;
+        padding: 1.5rem;
+        width: 200px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+      }
+
+      .birthday-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .birthday-avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin: 0 auto 1rem;
+        overflow: hidden;
+        border: 3px solid var(--accent-color);
+      }
+
+      .birthday-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .birthday-name {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: var(--primary-color);
+      }
+
+      .birthday-date {
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      .testimonials {
+        background-color: var(--secondary-color);
+      }
+
+      .testimonial-slider {
+        max-width: 800px;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .testimonial {
+        background-color: #f9f5ff;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        display: none;
+      }
+
+      .testimonial.active {
+        display: block;
+        animation: fadeIn 0.5s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .testimonial-text {
+        font-style: italic;
+        margin-bottom: 1.5rem;
+        position: relative;
+      }
+
+      .testimonial-text::before,
+      .testimonial-text::after {
+        content: '"';
+        font-size: 2rem;
+        color: var(--accent-color);
+        opacity: 0.5;
+      }
+
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .author-avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 1rem;
+      }
+
+      .author-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .author-info h4 {
+        color: var(--primary-color);
+        margin-bottom: 0.2rem;
+      }
+
+      .author-info p {
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      .slider-controls {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+      }
+
+      .slider-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #ddd;
+        margin: 0 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .slider-dot.active {
+        background-color: var(--primary-color);
+      }
+
+      .contact {
+        background-color: #f9f5ff;
+      }
+
+      .contact-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
+
+      .contact-info {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .contact-info h3 {
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+      }
+
+      .contact-details {
+        margin-bottom: 2rem;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+      }
+
+      .contact-icon {
+        color: var(--primary-color);
+        margin-right: 1rem;
+        font-size: 1.2rem;
+        min-width: 20px;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .social-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        border-radius: 50%;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .social-link:hover {
+        background-color: var(--accent-color);
+        color: var(--primary-color);
+        transform: translateY(-3px);
+      }
+
+      .contact-form {
+        flex: 1;
+        min-width: 300px;
+        background-color: var(--secondary-color);
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: var(--primary-color);
+        font-weight: 500;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 0.8rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+      }
+
+      .form-control:focus {
+        border-color: var(--primary-color);
+        outline: none;
+      }
+
+      textarea.form-control {
+        min-height: 150px;
+        resize: vertical;
+      }
+
+      footer {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        text-align: center;
+        padding: 2rem 0;
+      }
+
+      .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 0 2rem;
+      }
+
+      .footer-section {
+        flex: 1;
+        min-width: 250px;
+        text-align: left;
+      }
+
+      .footer-section h3 {
+        margin-bottom: 1.5rem;
+        position: relative;
+        padding-bottom: 0.5rem;
+      }
+
+      .footer-section h3::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 2px;
+        background-color: var(--accent-color);
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 0.8rem;
+      }
+
+      .footer-links a {
+        color: var(--secondary-color);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .footer-links a:hover {
+        color: var(--accent-color);
+      }
+
+      .newsletter-form {
+        display: flex;
+        margin-top: 1rem;
+      }
+
+      .newsletter-input {
+        flex: 1;
+        padding: 0.8rem;
+        border: none;
+        border-radius: 4px 0 0 4px;
+        font-size: 1rem;
+      }
+
+      .newsletter-btn {
+        background-color: var(--accent-color);
+        color: var(--primary-color);
+        border: none;
+        padding: 0 1.5rem;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
+
+      .newsletter-btn:hover {
+        background-color: var(--secondary-color);
+      }
+
+      .footer-bottom {
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .back-to-top {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        width: 50px;
+        height: 50px;
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 99;
+      }
+
+      .back-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .back-to-top:hover {
+        background-color: var(--accent-color);
+        color: var(--primary-color);
+        transform: translateY(-3px);
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.2rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+
+        nav ul {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        nav ul li {
+          margin: 0.3rem 0;
+        }
+
+        .section-title {
+          margin-bottom: 2rem;
+        }
+
+        .footer-content {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .footer-section {
+          text-align: center;
+        }
+
+        .footer-section h3::after {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">i<span>WEP</span></div>
+      <div class="tagline">
+        International Women's Empowerment Prayer Network
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Our Services</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#birthdays">Birthdays</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Empowering Women Through Prayer and Community</h1>
+        <p>
+          Join our non-denominational network of women supporting each other
+          through prayer, mentorship, and empowerment initiatives.
+        </p>
+        <a href="#contact" class="btn">Join Us Today</a>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">About iWEP</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              iWEP (International Women's Empowerment Prayer Network) is a
+              global community of women dedicated to spiritual growth, personal
+              development, and mutual support through prayer and fellowship.
+            </p>
+            <p>
+              Founded in 2015, we have grown from a small prayer group to an
+              international network with members across six continents. Our
+              mission is to create a safe space where women can come together to
+              pray, share experiences, and empower one another to reach their
+              full potential.
+            </p>
+            <p>
+              We believe in the power of prayer to transform lives and
+              communities. Our non-denominational approach welcomes women from
+              all Christian backgrounds to join us in worship and fellowship.
+            </p>
+            <a href="#services" class="btn">Our Services</a>
+          </div>
+          <div class="about-image">
+            <img
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Women praying together"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-image">
+              <img
+                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Virtual Prayer Meeting"
+              />
+            </div>
+            <div class="service-content">
+              <h3>Daily Virtual Prayers</h3>
+              <p>
+                Join us every weekday evening for our one-hour virtual prayer
+                sessions. These powerful moments of intercession and worship
+                have transformed countless lives.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-image">
+              <img
+                src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Prison Ministry"
+              />
+            </div>
+            <div class="service-content">
+              <h3>Prison Ministry</h3>
+              <p>
+                Our prison visitation program brings hope and encouragement to
+                incarcerated women through prayer, counseling, and practical
+                support.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-image">
+              <img
+                src="https://images.unsplash.com/photo-1522205408450-add114ad53fe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Mentorship Program"
+              />
+            </div>
+            <div class="service-content">
+              <h3>Mentorship Program</h3>
+              <p>
+                We connect women with experienced mentors for one-on-one
+                guidance in spiritual growth, career development, and personal
+                challenges.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-image">
+              <img
+                src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Marriage Enrichment"
+              />
+            </div>
+            <div class="service-content">
+              <h3>Marriage Enrichment</h3>
+              <p>
+                Our marriage talks and workshops help couples build stronger
+                relationships through biblical principles and practical tools.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-image">
+              <img
+                src="https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Men's Ministry"
+              />
+            </div>
+            <div class="service-content">
+              <h3>Men's Empowerment</h3>
+              <p>
+                We believe in empowering men to be godly leaders through our
+                specialized sessions and support groups.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-image">
+              <img
+                src="https://images.unsplash.com/photo-1542626991-cbc4e32524cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Youth Program"
+              />
+            </div>
+            <div class="service-content">
+              <h3>Youth Development</h3>
+              <p>
+                Our youth programs equip the next generation with spiritual
+                foundation and life skills to navigate modern challenges.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="events" class="events">
+      <div class="container">
+        <h2 class="section-title">Upcoming Events</h2>
+        <div class="event-calendar">
+          <div class="calendar-header">June 2023</div>
+          <div class="calendar-grid">
+            <div class="calendar-day-header">Sun</div>
+            <div class="calendar-day-header">Mon</div>
+            <div class="calendar-day-header">Tue</div>
+            <div class="calendar-day-header">Wed</div>
+            <div class="calendar-day-header">Thu</div>
+            <div class="calendar-day-header">Fri</div>
+            <div class="calendar-day-header">Sat</div>
+
+            <div class="calendar-day empty">28</div>
+            <div class="calendar-day empty">29</div>
+            <div class="calendar-day empty">30</div>
+            <div class="calendar-day empty">31</div>
+            <div class="calendar-day">
+              1
+              <div class="event-item">Virtual Prayer (7pm)</div>
+            </div>
+            <div class="calendar-day">
+              2
+              <div class="event-item">Virtual Prayer (7pm)</div>
+            </div>
+            <div class="calendar-day">3</div>
+
+            <div class="calendar-day">4</div>
+            <div class="calendar-day">
+              5
+              <div class="event-item">Virtual Prayer (7pm)</div>
+            </div>
+            <div class="calendar-day">
+              6
+              <div class="event-item">Virtual Prayer (7pm)</div>
+              <div class="event-item">Mentorship Meeting (8:30pm)</div>
+            </div>
+            <div class="calendar-day">
+              7
+              <div class="event-item">Virtual Prayer (7pm)</div>
+            </div>
+            <div class="calendar-day">
+              8
+              <div class="event-item">Virtual Prayer (7pm)</div>
+            </div>
+            <div class="calendar-day">
+              9
+              <div class="event-item">Virtual Prayer (7pm)</div>
+            </div>
+            <div class="calendar-day">10</div>
+
+            <div class="calendar-day">11</div>
+            <div class="calendar-day">
+              12
+              <div class="event-item">Virtual Prayer (7pm)</div>
+            </div>
+            <div class="calendar-day">
+              13
+              <div class="event-item">Virtual Prayer (7pm)</div>
+            </div>
+            <div class="calendar-day">
+              14
+              <div class="event-item">Virtual Prayer (7pm)</div>
+              <div class="event-item">Prison Visit (10am)</div>
+            </div>
+            <div class="calendar-day">
+              15
+              <div class="event-item">Virtual Prayer (7pm)</div>
+            </div>
+            <div class="calendar-day">
+              16
+              <div class="event-item">Virtual Prayer (7pm)</div>
+            </div>
+            <div class="calendar-day">17</div>
+
+            <div class="calendar-day">18</div>
+            <div class="calendar-day">
+              19
+              <div class="event-item">Virtual Prayer (7pm)</div>
+            </div>
+            <div class="calendar-day">
+              20
+              <div class="event-item">Virtual Prayer (7pm)</div>
+              <div class="event-item">Marriage Talk (8:30pm)</div>
+            </div>
+            <div class="calendar-day">
+              21
+              <div class="event-item">Virtual Prayer (7pm)</div>
+            </div>
+            <div class="calendar-day">
+              22
+              <div class="event-item">Virtual Prayer (7pm)</div>
+            </div>
+            <div class="calendar-day">
+              23
+              <div class="event-item">Virtual Prayer (7pm)</div>
+            </div>
+            <div class="calendar-day">24</div>
+
+            <div class="calendar-day">25</div>
+            <div class="calendar-day">
+              26
+              <div class="event-item">Virtual Prayer (7pm)</div>
+            </div>
+            <div class="calendar-day">
+              27
+              <div class="event-item">Virtual Prayer (7pm)</div>
+              <div class="event-item">Men's Session (8:30pm)</div>
+            </div>
+            <div class="calendar-day today">
+              28
+              <div class="event-item">Virtual Prayer (7pm)</div>
+              <div class="event-item">Youth Empowerment (6pm)</div>
+            </div>
+            <div class="calendar-day">
+              29
+              <div class="event-item">Virtual Prayer (7pm)</div>
+            </div>
+            <div class="calendar-day">
+              30
+              <div class="event-item">Virtual Prayer (7pm)</div>
+            </div>
+            <div class="calendar-day">1</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="birthdays" class="birthdays">
+      <div class="container">
+        <h2 class="section-title">June Birthdays</h2>
+        <p>Join us in celebrating our members this month!</p>
+        <div class="birthday-container">
+          <div class="birthday-card">
+            <div class="birthday-avatar">
+              <img
+                src="https://randomuser.me/api/portraits/women/43.jpg"
+                alt="Sarah Johnson"
+              />
+            </div>
+            <div class="birthday-name">Sarah Johnson</div>
+            <div class="birthday-date">June 5</div>
+          </div>
+
+          <div class="birthday-card">
+            <div class="birthday-avatar">
+              <img
+                src="https://randomuser.me/api/portraits/women/65.jpg"
+                alt="Michelle Brown"
+              />
+            </div>
+            <div class="birthday-name">Michelle Brown</div>
+            <div class="birthday-date">June 12</div>
+          </div>
+
+          <div class="birthday-card">
+            <div class="birthday-avatar">
+              <img
+                src="https://randomuser.me/api/portraits/women/32.jpg"
+                alt="Grace Williams"
+              />
+            </div>
+            <div class="birthday-name">Grace Williams</div>
+            <div class="birthday-date">June 15</div>
+          </div>
+
+          <div class="birthday-card">
+            <div class="birthday-avatar">
+              <img
+                src="https://randomuser.me/api/portraits/men/75.jpg"
+                alt="David Miller"
+              />
+            </div>
+            <div class="birthday-name">David Miller</div>
+            <div class="birthday-date">June 22</div>
+          </div>
+
+          <div class="birthday-card">
+            <div class="birthday-avatar">
+              <img
+                src="https://randomuser.me/api/portraits/women/89.jpg"
+                alt="Patricia Davis"
+              />
+            </div>
+            <div class="birthday-name">Patricia Davis</div>
+            <div class="birthday-date">June 28</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+      <div class="container">
+        <h2 class="section-title">Testimonials</h2>
+        <div class="testimonial-slider">
+          <div class="testimonial active">
+            <div class="testimonial-text">
+              iWEP has been a lifeline for me during a very difficult season.
+              The daily prayers and support from the sisters kept me going when
+              I felt like giving up. Through this community, I've grown
+              spiritually and found practical help for my family.
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <img
+                  src="https://randomuser.me/api/portraits/women/33.jpg"
+                  alt="Amanda T."
+                />
+              </div>
+              <div class="author-info">
+                <h4>Amanda T.</h4>
+                <p>Member since 2018</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="testimonial-text">
+              The prison ministry changed my life. When I was incarcerated, the
+              iWEP volunteers showed me love when I felt unlovable. They helped
+              me reconnect with God and gave me hope for a better future. Now
+              I'm free and part of this amazing community.
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <img
+                  src="https://randomuser.me/api/portraits/women/56.jpg"
+                  alt="Jessica R."
+                />
+              </div>
+              <div class="author-info">
+                <h4>Jessica R.</h4>
+                <p>Member since 2020</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="testimonial-text">
+              As a man in the iWEP community, I've found incredible support and
+              brotherhood. The men's sessions have helped me become a better
+              husband, father, and spiritual leader. My wife and I also
+              benefited greatly from the marriage enrichment program.
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <img
+                  src="https://randomuser.me/api/portraits/men/68.jpg"
+                  alt="Michael B."
+                />
+              </div>
+              <div class="author-info">
+                <h4>Michael B.</h4>
+                <p>Member since 2019</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-controls">
+            <div class="slider-dot active" data-slide="0"></div>
+            <div class="slider-dot" data-slide="1"></div>
+            <div class="slider-dot" data-slide="2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Get In Touch</h3>
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div>
+                  <p><strong>Headquarters:</strong></p>
+                  <p>123 Empowerment Way, Suite 456</p>
+                  <p>Hope City, HC 78901</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">✉️</div>
+                <div>
+                  <p><strong>Email:</strong></p>
+                  <p>info@iwepnetwork.org</p>
+                  <p>prayer@iwepnetwork.org</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div>
+                  <p><strong>Phone:</strong></p>
+                  <p>+1 (555) 123-4567</p>
+                  <p>Prayer Line: +1 (555) 987-6543</p>
+                </div>
+              </div>
+            </div>
+            <h3>Follow Us</h3>
+            <div class="social-links">
+              <a href="#" class="social-link">f</a>
+              <a href="#" class="social-link">in</a>
+              <a href="#" class="social-link">ig</a>
+              <a href="#" class="social-link">▶️</a>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" class="form-control" required></textarea>
+              </div>
+              <button type="submit" class="btn">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About iWEP</h3>
+          <p>
+            International Women's Empowerment Prayer Network is a global
+            community dedicated to spiritual growth, personal development, and
+            mutual support through prayer and fellowship.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Subscribe</h3>
+          <p>Stay updated with our latest news and events.</p>
+          <form class="newsletter-form">
+            <input
+              type="email"
+              placeholder="Your Email"
+              class="newsletter-input"
+              required
+            />
+            <button type="submit" class="newsletter-btn">Join</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2023 iWEP - International Women's Empowerment Prayer Network.
+          All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <a href="#" class="back-to-top">↑</a>
+
+    <script>
+      // Testimonial slider functionality
+      const testimonials = document.querySelectorAll(".testimonial");
+      const dots = document.querySelectorAll(".slider-dot");
+      let currentTestimonial = 0;
+
+      function showTestimonial(index) {
+        testimonials.forEach((testimonial) =>
+          testimonial.classList.remove("active")
+        );
+        dots.forEach((dot) => dot.classList.remove("active"));
+
+        testimonials[index].classList.add("active");
+        dots[index].classList.add("active");
+        currentTestimonial = index;
+      }
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+          showTestimonial(index);
+        });
+      });
+
+      // Auto-rotate testimonials
+      setInterval(() => {
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        showTestimonial(currentTestimonial);
+      }, 5000);
+
+      // Back to top button
+      const backToTopButton = document.querySelector(".back-to-top");
+
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.add("visible");
+        } else {
+          backToTopButton.classList.remove("visible");
+        }
+      });
+
+      backToTopButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      // Form submission
+      const contactForm = document.getElementById("contactForm");
+
+      contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        alert("Thank you for your message! We will get back to you soon.");
+        contactForm.reset();
+      });
+
+      // Smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
+
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
