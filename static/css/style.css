@@ -28,6 +28,25 @@ header {
   top: 0;
   z-index: 100;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* admin login btn */
+.admin-login-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--secondary-color);
+  font-size: 0.7rem;
+  text-decoration: none;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.admin-login-btn:hover {
+  text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .logo {
@@ -350,7 +369,7 @@ section {
   .events-container {
     grid-template-columns: 1fr;
   }
-  
+
   .event-flyer {
     height: 250px;
   }
@@ -401,11 +420,9 @@ section {
   transition: transform 0.5s ease;
 }
 
-
 .coordinator-card:hover .coordinator-avatar img {
   transform: scale(1.1);
 }
-
 
 .coordinator-name {
   font-weight: bold;
@@ -434,7 +451,7 @@ section {
   .coordinator-card {
     width: 220px;
   }
-  
+
   .coordinator-avatar {
     width: 130px;
     height: 130px;
