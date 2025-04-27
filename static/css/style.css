@@ -186,7 +186,7 @@ section {
 
 .scripture-ref {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: rgba(224, 176, 255, 0.15); 
+  background-color: rgba(224, 176, 255, 0.15);
   border-left: 3px solid var(--primary-color);
   box-shadow: var(--primary-color) 0px 3px 5px 0px;
   padding: 1.5rem;
@@ -391,28 +391,28 @@ section {
   color: #666;
 }
 
-.testimonials {
+.devotionals {
   background-color: var(--secondary-color);
 }
 
-.testimonial-slider {
+.devotional-card {
   max-width: 800px;
   margin: 0 auto;
   position: relative;
 }
 
-.testimonial {
+.devotional {
   background-color: #f9f5ff;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   text-align: center;
-  display: none;
-}
-
-.testimonial.active {
   display: block;
   animation: fadeIn 0.5s ease;
+}
+
+.devotional.active {
+  display: block;
 }
 
 @keyframes fadeIn {
@@ -423,71 +423,98 @@ section {
     opacity: 1;
   }
 }
+/* devotionals */
+.devotionals {
+  background-color: var(--secondary-color);
+}
 
-.testimonial-text {
-  font-style: italic;
-  margin-bottom: 1.5rem;
+.devotional-card {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.devotional-card:hover {
+  transform: translateY(-5px);
+}
+
+.devotional-image {
+  height: 200px;
+  overflow: hidden;
   position: relative;
 }
 
-.testimonial-text::before,
-.testimonial-text::after {
-  content: '"';
-  font-size: 2rem;
-  color: var(--accent-color);
-  opacity: 0.5;
-}
-
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.author-avatar {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-right: 1rem;
-}
-
-.author-avatar img {
+.devotional-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
-.author-info h4 {
-  color: var(--primary-color);
-  margin-bottom: 0.2rem;
+.devotional-card:hover .devotional-image img {
+  transform: scale(1.05);
 }
 
-.author-info p {
-  font-size: 0.9rem;
+.devotional-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.devotional-content {
+  padding: 1.5rem;
+  position: relative;
+}
+
+.devotional-date {
+  font-size: 0.85rem;
   color: #666;
+  margin-bottom: 0.5rem;
 }
 
-.slider-controls {
-  display: flex;
-  justify-content: center;
+.devotional-title {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.devotional-excerpt {
+  color: #555;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.read-more-link {
+  color: var(--primary-color);
+  font-weight: 400;
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent-color);
+  padding-bottom: 1px;
+  transition: all 0.3s ease;
+}
+
+.read-more-link:hover {
+  color: #8a2be2;
+  border-color: var(--primary-color);
+}
+
+.view-btn {
+  text-align: center;
   margin-top: 2rem;
 }
 
-.slider-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #ddd;
-  margin: 0 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.slider-dot.active {
-  background-color: var(--primary-color);
-}
-
+/* contact form */
 .contact {
   background-color: #f9f5ff;
 }

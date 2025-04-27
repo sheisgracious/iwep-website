@@ -1,22 +1,22 @@
 // Testimonial slider functionality
-const testimonials = document.querySelectorAll(".testimonial");
-const dots = document.querySelectorAll(".slider-dot");
-let currentTestimonial = 0;
+// const testimonials = document.querySelectorAll(".testimonial");
+// const dots = document.querySelectorAll(".slider-dot");
+// let currentTestimonial = 0;
 
-function showTestimonial(index) {
-  testimonials.forEach((testimonial) => testimonial.classList.remove("active"));
-  dots.forEach((dot) => dot.classList.remove("active"));
+// function showTestimonial(index) {
+//   testimonials.forEach((testimonial) => testimonial.classList.remove("active"));
+//   dots.forEach((dot) => dot.classList.remove("active"));
 
-  testimonials[index].classList.add("active");
-  dots[index].classList.add("active");
-  currentTestimonial = index;
-}
+//   testimonials[index].classList.add("active");
+//   dots[index].classList.add("active");
+//   currentTestimonial = index;
+// }
 
-dots.forEach((dot, index) => {
-  dot.addEventListener("click", () => {
-    showTestimonial(index);
-  });
-});
+// dots.forEach((dot, index) => {
+//   dot.addEventListener("click", () => {
+//     showTestimonial(index);
+//   });
+// });
 
 // Auto-rotate testimonials
 setInterval(() => {
