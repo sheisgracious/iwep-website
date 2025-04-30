@@ -1,4 +1,4 @@
-// Testimonial slider functionality
+// // Testimonial slider functionality
 // const testimonials = document.querySelectorAll(".testimonial");
 // const dots = document.querySelectorAll(".slider-dot");
 // let currentTestimonial = 0;
@@ -18,11 +18,32 @@
 //   });
 // });
 
-// Auto-rotate testimonials
-setInterval(() => {
-  currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-  showTestimonial(currentTestimonial);
-}, 5000);
+// // Auto-rotate testimonials
+// setInterval(() => {
+//   currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+//   showTestimonial(currentTestimonial);
+// }, 5000);
+
+//Login modal functionality
+const modal = document.getElementById("adminModal");
+const adminBtn = document.getElementById("adminBtn");
+const closeModal = document.querySelector(".close-modal");
+
+adminBtn.addEventListener("click", () => {
+  modal.style.display = "block";
+});
+
+closeModal.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+window.addEventListener("click", (event) => {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+});
+
+
 
 // Back to top button
 const backToTopButton = document.querySelector(".back-to-top");

@@ -9,8 +9,8 @@
 
   <body>
     <header>
-      <br>
-      <a href="/admin/login" class="admin-login-btn">Login</a>
+      <br />
+      <button id="adminBtn" class="admin-login-btn">Login</button>
       <div class="logo">i<span>WEP</span></div>
       <div class="tagline">
         International Women's Empowerment Prayer Network
@@ -28,6 +28,36 @@
       </ul>
     </nav>
 
+    <!-- login Modal -->
+    <div id="adminModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Admin Login</h2>
+        <form id="adminLoginForm">
+          <div class="form-group">
+            <label for="adminEmail">Username</label>
+            <input
+              type="username"
+              id="adminUsername"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="adminPassword">Password</label>
+            <input
+              type="password"
+              id="adminPassword"
+              class="form-control"
+              required
+            />
+          </div>
+          <button type="submit" class="btn">Sign In</button>
+        </form>
+        <p class="admin-note">Restricted to admin only</p>
+      </div>
+    </div>
+
     <section id="home" class="hero">
       <div class="hero-content">
         <h1>Empowering Our Generation Through Prayer and Community</h1>
@@ -38,6 +68,7 @@
         <!-- link to join us page/form -->
         <a href="#contact" class="btn">Join Us Today</a>
       </div>
+      <!-- <div class="gallery-slideshow"></div> -->
     </section>
 
     <section id="about" class="about">
