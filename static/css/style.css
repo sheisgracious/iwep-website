@@ -933,7 +933,8 @@ footer {
 .modal h2 {
   margin: 0;
   text-align: center;
-  color: #8a2be2;
+  color: #610ab3;
+  padding-bottom: 5%;
 }
 
 .modal p {
