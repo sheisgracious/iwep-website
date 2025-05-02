@@ -23,7 +23,7 @@
         <li><a href="#about">About Us</a></li>
         <li><a href="#services">Our Services</a></li>
         <li><a href="#events">Events</a></li>
-        <li><a href="#devotionals">Devotionals</a></li>
+        <li><a href="#gallery">Gallery</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -68,7 +68,6 @@
         <!-- link to join us page/form -->
         <a href="#contact" class="btn">Join Us Today</a>
       </div>
-      <!-- <div class="gallery-slideshow"></div> -->
     </section>
 
     <section id="about" class="about">
@@ -283,36 +282,76 @@
       </div>
     </section>
 
-    <!-- Devotional section -->
-
-    <section id="devotionals" class="devotionals">
+    <!-- Gallery section -->
+    <section id="gallery" class="gallery">
       <div class="container">
-        <h2 class="section-title">Devotionals</h2>
+        <h2 class="section-title">Our Gallery</h2>
 
-        <div class="devotional-card">
-          <div class="devotional-image">
+        <div class="slideshow-container">
+          <div class="mySlides fade">
             <img
-              src="https://www.allprodad.com/wp-content/uploads/2021/03/05-12-21-happy-people.jpg"
-              alt="Daily Devotional"
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Women praying together"
             />
-            <div class="devotional-badge">Today's Word</div>
+            <div class="caption">
+              Our weekly prayer meetings bring women together from around the
+              world
+            </div>
           </div>
 
-          <div class="devotional-content">
-            <div class="devotional-date">June 28, 2025</div>
-            <h3 class="devotional-title">Finding Peace in God's Presence</h3>
-            <p class="devotional-excerpt">
-              In the midst of life's storms, we can find unshakable peace when
-              we anchor ourselves in God's presence. This devotional explores
-              how to cultivate that divine connection...
-              <!-- link to devotionals page -->
-              <a href="#" class="read-more-link">Read More</a>
-            </p>
+          <div class="mySlides fade">
+            <img
+              src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Prison ministry"
+            />
+            <div class="caption">
+              Bringing hope and encouragement through our prison ministry
+            </div>
           </div>
+
+          <div class="mySlides fade">
+            <img
+              src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Marriage enrichment"
+            />
+            <div class="caption">
+              Strengthening marriages through biblical principles
+            </div>
+          </div>
+
+          <div class="mySlides fade">
+            <img
+              src="https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Men's ministry"
+            />
+            <div class="caption">
+              Empowering men to be godly leaders in their communities
+            </div>
+          </div>
+
+          <div class="mySlides fade">
+            <img
+              src="https://images.unsplash.com/photo-1542626991-cbc4e32524cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Youth program"
+            />
+            <div class="caption">
+              Equipping the next generation with spiritual foundation
+            </div>
+          </div>
+
+          <!-- buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
+        <br />
 
-        <div class="view-btn">
-          <a href="#" class="btn">View All</a>
+        <!-- navigation dots -->
+        <div class="dot-container">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
         </div>
       </div>
     </section>
