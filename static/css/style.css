@@ -492,6 +492,7 @@ section {
   width: 220px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
+  text-align: center;
 }
 
 .coordinator-card:hover {
@@ -915,6 +916,33 @@ footer {
   max-width: 400px;
   position: relative;
   animation: modalFadeIn 0.3s;
+}
+
+.show-password-container {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#showPassword {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--primary-color); 
+}
+
+#showPassword + label {
+  font-size: 0.9rem;
+  color: #242222;
+  cursor: pointer;
+  padding-top: .5rem;
+}
+
+.error-message {
+  color: #cf1f1f;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  display: none;
 }
 
 @keyframes modalFadeIn {

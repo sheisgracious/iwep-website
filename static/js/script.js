@@ -43,6 +43,13 @@ window.addEventListener("click", (event) => {
   }
 });
 
+// Toggle password visibility
+document.getElementById("showPassword").addEventListener("change", function () {
+  const passwordInput = document.getElementById("adminPassword");
+  passwordInput.type = this.checked ? "text" : "password";
+  passwordInput.focus();
+});
+
 // Back to top button
 const backToTopButton = document.querySelector(".back-to-top");
 
@@ -158,7 +165,6 @@ function showSlides(n) {
 setInterval(function () {
   plusSlides(1);
 }, 5000);
-
 
 //Login
 const firebaseConfig = {

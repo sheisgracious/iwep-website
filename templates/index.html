@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>iWEP</title>
     <link rel="stylesheet" href="/static/css/style.css" />
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
   </head>
 
   <body>
@@ -51,8 +53,14 @@
               class="form-control"
               required
             />
+            <div class="show-password-container">
+              <input type="checkbox" id="showPassword" />
+              <label for="showPassword">Show password</label>
+            </div>
+            <div id="loginError" class="error-message"></div>
           </div>
-          <button type="submit" class="btn">Sign In</button>
+
+          <button type="submit" onclick="" class="btn">Sign In</button>
         </form>
         <p class="admin-note">Restricted to admin only</p>
       </div>
