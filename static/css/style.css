@@ -941,7 +941,8 @@ footer {
 .error-message {
   color: #cf1f1f;
   font-size: 0.9rem;
-  margin-top: 5px;
+  /* margin: 8px; */
+  text-align: center;
   display: none;
 }
 
@@ -955,6 +956,8 @@ footer {
     transform: translateY(0);
   }
 }
+
+
 
 .close-modal {
   position: absolute;

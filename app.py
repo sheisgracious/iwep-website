@@ -23,9 +23,8 @@ def home():
 def admin_login():
     data = request.json
     try:
-        # Verify ID token (client will send this after Firebase Auth)
         decoded_token = auth.verify_id_token(data['idToken'])
-        session['admin_uid'] = decoded_token['uid']  # Store in server-side session
+        session['admin_uid'] = decoded_token['uid'] 
         return jsonify({"success": True})
     except Exception as e:
         return jsonify({"error": str(e)}), 401
